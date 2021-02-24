@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+}
+
+main {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.display-container {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture-container {
+  border: 1rem solid #111010ec;
+  width: 40vw;
+  height: 80vh;
+}
+
+.distortion {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+canvas {
+  position: absolute;
+}
+
+.options-container {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.options-container button {
+  width: 10rem;
+  height: 5rem;
+  margin: 1.5rem;
+  border: 0.4rem solid #111010ec;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+i {
+  font-size: 2rem;
+}
+
+#zoom,
+#randomizeBtn {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 1rem;
+}
+
+#zoom:before,
+#randomizeBtn:before {
+  content: '';
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -0.2rem;
+  left: -0.2rem;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(0.5rem);
+  width: calc(100% + 0.4rem);
+  height: calc(100% + 0.4rem);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 1rem;
+}
+
+#zoom:active,
+#randomizeBtn:active {
+  color: #000;
+}
+
+#zoom:active:after,
+#randomizeBtn:active:after {
+  background: transparent;
+}
+
+#zoom:hover:before,
+#randomizeBtn:hover:before {
+  opacity: 1;
+}
+
+#zoom:after,
+#randomizeBtn:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 1rem;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.randomize {
+  animation: spin 1s linear forwards;
+}
+
+.fadedImg {
+  animation: fadeIn ease-in-out 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg);
+  }
+}

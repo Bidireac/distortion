@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Distortion</title>
+  </head>
+  <body>
+    <main>
+      <div class="display-container">
+        <div class="picture-container">
+          <div class="distortion"></div>
+        </div>
+        <div class="options-container">
+          <button id="zoom">
+            <i class="fas fa-search-plus" id="zoomIcon"></i>
+          </button>
+          <button id="randomizeBtn">
+            <i class="fas fa-undo" id="randomizeIcon"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+      integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js"
+      integrity="sha512-XI02ivhfmEfnk8CEEnJ92ZS6hOqWoWMKF6pxF/tC/DXBVxDXgs2Kmlc9CHA0Aw2dX03nrr8vF54Z6Mqlkuabkw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="hover.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
