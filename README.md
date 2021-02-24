@@ -30,4 +30,4 @@ Project is:  _finished
 
 ## Live Demo
 
-https://naughty-poincare-55bb73.netlify.app
+https://blissful-turing-aa38a2.netlify.app/
